@@ -9,7 +9,7 @@ jobs:
 
       - name: Write the cypress.env.json file 📝
         run: |
-          echo ${{ secrets.CYPRESS_ENV_CI }} > cypress.env.json
+          echo '${{ secrets.CYPRESS_ENV_CI }}' > cypress.env.json
 
       - name: Cypress run 🚀
         uses: cypress-io/github-action@v3

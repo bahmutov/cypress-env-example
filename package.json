@@ -1,0 +1,26 @@
+{
+  "name": "cypress-env-example",
+  "version": "1.0.0",
+  "description": "Save the GitHub Actions secrets as cypress.env.json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/cypress-env-example.git"
+  },
+  "keywords": [
+    "cypress-example"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/cypress-env-example/issues"
+  },
+  "homepage": "https://github.com/bahmutov/cypress-env-example#readme",
+  "devDependencies": {
+    "cypress": "^9.6.1",
+    "prettier": "^2.6.2"
+  }
+}

@@ -1,0 +1,15 @@
+name: ci
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+
+      - name: Write the cypress.env.json file 📝
+        run: |
+          echo ${{ secrets.CYPRESS_ENV_CI }} > cypress.env.json
+
+      - name: Cypress run 🚀
+        uses: cypress-io/github-action@v3

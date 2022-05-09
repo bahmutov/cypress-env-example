@@ -11,5 +11,16 @@ jobs:
         run: |
           echo '${{ secrets.CYPRESS_ENV_CI }}' > cypress.env.json
 
+      # https://github.com/cypress-io/github-action
       - name: Cypress run 🚀
         uses: cypress-io/github-action@v3
+
+      # you can use Cypress Dashboard to store the screenshots
+      # or store them on GitHub and download the zip file
+      # https://github.com/actions/upload-artifact
+      - name: Save screenshots 🖼
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
